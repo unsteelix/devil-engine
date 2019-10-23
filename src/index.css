@@ -1,0 +1,463 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.App{
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+    align-items: center;
+    color: #333;
+    font-size: 20px;
+    /*
+    background-image: url(https://images.pexels.com/photos/1575833/pexels-photo-1575833.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+    background-image: url(https://images.pexels.com/photos/2033991/pexels-photo-2033991.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+	background-image: url(https://images.pexels.com/photos/2055740/pexels-photo-2055740.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+	background-image: url(https://images.pexels.com/photos/2025840/pexels-photo-2025840.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+
+	background-image: url(https://pbs.twimg.com/media/D00yHmBWwAU_EKA.png:large);
+	background-image: url(https://live.staticflickr.com/7884/46828086384_de2d977f00_k.jpg);
+    background-image: url(https://live.staticflickr.com/1950/43584416350_1601097301_o.jpg);
+    background-image: url(http://u90905st.beget.tech/devil-engine/backend/upload/22.JPG);
+    background-image: url(http://www.matthewmaran.com/wp-content/uploads/2014/11/Rainforest_Trail.jpg);
+*/
+/*background-image: url(/background_3.jpg);*/
+background-image: url(http://u90905st.beget.tech/devil-engine/backend/upload/22.JPG);
+
+
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+
+
+
+ }
+
+.Search{
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Search input{
+    width: 100%;
+    height: 30px;
+    padding: 20px 10px;
+    margin: 10px auto;
+    box-sizing: border-box;
+    font-size: 20px;
+    text-decoration: none;
+    border: none;
+
+    -webkit-box-shadow: 0px 3px 11px -2px rgba(70, 70, 70, 0.5);
+	box-shadow: 0px 3px 11px -2px rgba(70, 70, 70, 0.5);
+}
+
+.Search input:focus{
+	outline: none;
+	background-color: #f1f1f1;
+}
+
+.Search .extra{
+    display: none;
+    background-color: white;
+    height: 100%;
+
+}
+.Search.extra .extra{
+    display: inline-flex;
+}
+
+
+.ListCard{
+	padding: 20px;
+    width: 600px;
+    overflow: auto;
+
+
+}
+
+
+.ListCard{
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+}
+.ListCard::-webkit-scrollbar {
+    display: none;
+}
+
+
+.Card{
+	width: 100%;
+	min-height: 200px;
+    margin-top: 20px;
+    position: relative;
+	bottom: 150px;
+}
+
+.Card.show{
+	bottom: 0;
+	transition: all 0.3s;
+}
+
+.Card .background{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: white;
+}
+
+.Card .side-panel{
+    position: absolute;
+    right: -2px;
+    top: 0px;
+    z-index: 115;
+    /* height: 100%; */
+    padding: 0 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 8px;
+    cursor: pointer;
+    color: #989898;
+}
+
+.Card .title{
+	z-index: 10;
+	position: relative;
+	top: 0px;
+	font-size: 23px;
+	border-bottom: 1px solid #7b7b7b;
+	padding: 8px 12px;
+}
+
+.Card .text{
+	z-index: 10;
+	position: relative;
+	font-size: 18px;
+}
+
+.Card .text img{
+	width: 100%;
+}
+
+.Card .text p{
+
+}
+
+
+.ListTag{
+	z-index: 10;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	padding: 10px;
+}
+
+.ListTag div{
+	margin-right: 10px;
+}
+
+
+
+.AddCard{
+	-webkit-box-shadow: 0px 3px 6px 1px rgba(133,133,133,1);
+	-moz-box-shadow: 0px 3px 6px 1px rgba(133,133,133,1);
+	box-shadow: 0px 3px 6px 1px rgba(133,133,133,1);
+
+	background-color: white;
+}
+
+.AddCard .input-title{
+    border: none;
+    border-bottom: 1px solid grey;
+    width: 100%;
+    padding: 7px 10px 5px 10px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+.AddCard .input-title:focus {
+	background-color: #f1f1f1;
+	border: none;
+	border-bottom: 1px solid grey;
+	outline: none;
+}
+
+.AddCard .input-text{
+	resize: none;
+	border: none;
+}
+
+.AddCard .input-text:focus{
+	background-color: #f1f1f1;
+	outline: none;
+}
+
+
+.AddCard .content-wrap{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	border-bottom: 1px solid grey;
+}
+
+.AddCard .content-wrap .preview, .AddCard .content-wrap .input-text{
+	flex: 1;
+}
+
+.AddCard .content-wrap .preview{
+	border-right: 1px solid grey;
+}
+
+.AddCard .content-wrap .preview img{
+    width: 100%;
+    max-width: 400px;
+}
+
+
+.AddCard .input-tag{
+	width: 100%;
+	box-sizing: border-box;
+	border: none;
+	border-bottom: 1px solid grey;
+	padding: 6px;
+	font-size: 20px;
+}
+
+.AddCard .input-tag:focus{
+	outline: none;
+	background-color: #f1f1f1;
+}
+
+
+.AddCard .input-password{
+	width: 100%;
+	box-sizing: border-box;
+	border: none;
+	border-bottom: 1px solid grey;
+	padding: 6px;
+	font-size: 20px;
+}
+
+.AddCard .input-password:focus{
+	outline: none;
+	background-color: #f1f1f1;
+}
+
+
+.AddCard .button-private{
+	padding: 5px;
+}
+
+.AddCard .button-private span{
+	cursor: pointer;
+	font-weight: bold;
+}
+
+
+.AddCard .button-add{
+	cursor: pointer;
+	color: green;
+	padding: 5px;
+}
+
+
+
+
+.HelpCard{
+	background-color: white;
+    padding: 20px;
+}
+
+
+
+
+.Upload{
+	-webkit-box-shadow: 0px 3px 6px 1px rgba(133,133,133,1);
+	-moz-box-shadow: 0px 3px 6px 1px rgba(133,133,133,1);
+	box-shadow: 0px 3px 6px 1px rgba(133,133,133,1);
+
+	padding: 6px;
+}
+
+.Upload form{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+.Upload input[name="file"]{
+	font-size: 18px;
+}
+
+
+
+.Upload button[type="submit"]{
+	font-size: 18px;
+	background-color: white;
+	border: none;
+	cursor: pointer;
+	outline: none;
+}
+
+.Upload button[type="submit"]:hover{
+	color: black;
+	transition: all 0.2s;
+}
+
+
+.AuthCard{
+	padding: 20px;
+    background-color: white;
+}
+
+
+
+/*	компонент ввода пароля	*/
+.PasswordShell{
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.PasswordShell input{
+	padding: 10px;
+	font-size: 22px;
+	margin: 30px;
+}
+
+
+
+/*	компонент Врат Штайна	*/
+.SteinShell{
+	width: 100%;
+	height: 100%;
+}
+
+.SteinShell .list-row{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	width: 100%;
+}
+
+.SteinShell .list-col{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+
+.SteinShell .one-col{
+    width: 100%;
+    height: 100%;
+
+    min-width: auto;
+    min-height: 80px;
+
+    max-width: 100px;
+    max-height: 100px;
+
+    background-color: white;
+    border: 0px solid white;
+}
+
+.SteinShell .one-col.pressed{
+	-webkit-box-shadow: inset 0px 0px 5px 2px rgba(97,97,97,0.7);
+	-moz-box-shadow: inset 0px 0px 5px 2px rgba(97,97,97,0.7);
+	box-shadow: inset 0px 0px 5px 2px rgba(97,97,97,0.7);
+}
+
+
+
+
+
+
+/*		CUSTOM NEW STYLE	*/
+/*
+.ListCard {
+    background-color: white;
+    padding: 0px;
+    box-shadow: 0px 3px 6px 1px rgba(133,133,133,1);
+}
+
+.Card{
+	border-top: 1px solid grey;
+	box-shadow: none;
+	min-height: unset;
+    margin-top: 0px;
+}
+.Card .title{
+	background-color: #f1f1f1;
+}
+*/
+
+.Search {
+    position: fixed;
+    width: 200px;
+    left: 50px;
+    bottom: 20px;
+}
+
+
+.ListCard {
+    padding: 0;
+    width: 600px;
+    height: 100%;
+    overflow: auto;
+    padding-top: 150px;
+
+    -webkit-box-shadow: 0px 3px 11px -2px rgba(70, 70, 70, 0.5);
+	box-shadow: 0px 3px 11px -2px rgba(70, 70, 70, 0.5);
+}
+
+.Card{
+	border-bottom: 1px solid #efefef;
+    width: 100%;
+    min-height: unset;
+    margin: unset;
+    position: relative;
+    background-color: white;
+    box-sizing: border-box;
+    /* margin-bottom: 10px; */
+    padding: 5px;
+
+}
+
+.Card .title{
+	font-size: 18px;
+    border-bottom: 1px solid #efefef;
+    padding: 0 8px 8px 8px;
+}
+
+.Card .ListTag{
+    font-size: 18px;
+    padding: 8px 8px 0 8px;
+}
